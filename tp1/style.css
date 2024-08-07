@@ -1,0 +1,33 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    background-color: rgb(62, 60, 60);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+h2{
+    color: rgb(49, 49, 48);
+    font-size: 26px;
+    padding-top: 1.5rem;
+    text-align: left;
+}
+
+p{
+    font-size: 18px;
+}
+
+ul >li{
+    list-style-type: none;
+    text-align: left;
+}
+
+footer{
+    background-color: rgb(62, 60, 60);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
