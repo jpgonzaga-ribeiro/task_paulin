@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cinza-menu: #D9D9D9;
+    --cinza-fundo: #E7E7E7;
+    --azul: #04C9F4;
+    --vermelho: #F40404;
+    --branco: #FFFFFF;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 99.3%;
+    background-color: var(--cinza-menu); 
+    box-shadow: 0 3px 3px rgba(63, 63, 63, 0.737);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+}
+
+nav li {
+    padding: 15px;
+    background-color: var(--cinza-menu);
+    border-bottom: 1px solid var(--branco);
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;  
+}
+
+nav li > a:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.cadastro {
+    background-color: var(--azul);
+}
+
+header {
+    margin-left: 20vw;
+    height: 7vh;
+    width: 80vw;
+    background-color: var(--azul);
+    display: flex;
+    padding-left: 40px;
+    align-items: center;
+    justify-content: left;
+    color: var(--branco);
+    font-size: 1.2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-left: 20vw;
+    gap: 15px;
+    padding: 16px; 
+    width: 80vw; 
+    height: 85vh;
+    border-radius: 2px;
+    background-color: var(--cinza-fundo);
+}
+
+.formulario {
+    background-color: var(--cinza-menu);
+    display: flex;
+    flex-direction: row;
+    width: 38vw;
+    height: 47vh;
+    padding: 10px;
+    box-shadow: 0 3px 3px rgba(63, 63, 63, 0.737);
+}
+
+form {
+    background-color: var(--cinza-menu);
+    display: grid;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    grid-template-areas: "nome nome nome"
+                         "estadocod estadocod estadocod"
+                         "regiao regiao regiao";
+}
+
+form h3 {
+    color: var(--branco);
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+form input {
+    width: 30vw;
+    height: 7vh;
+    background-color: var(--branco);
+    border: none;
+}
+
+.nome {
+    grid-area: nome;
+}
+
+.nome input {
+    width: 100%;
+}
+
+.estadocod {
+    grid-area: estadocod;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 6fr;
+    grid-template-areas: "estado codigo codigo";
+    gap: 40px;
+}
+
+.estado {
+    grid-area: estado;
+    width: 70px;
+}
+
+.estado input {
+    width: 90px;
+}
+
+.codigo {
+    grid-area: codigo;
+}
+
+.codigo input {
+    width: 100%;
+} 
+
+.regiao {
+    grid-area: regiao;
+}
+
+.regiao input {
+    width: 100%;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    color: var(--branco);
+    height: 6vh;
+    gap: 20px;
+}
+
+.botoes button {
+    width: 7vw;
+    border: none;
+    color: var(--branco);
+}
+
+footer {
+    margin-left: 20vw;
+    width: 80vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--azul);
+    font-size: 1.3rem;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+    aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    main {
+        height: 78vh;
+    }
+
+    header, main, footer {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    nav li {
+        flex: 1;
+        padding: 10px; 
+        border-right: 0.2px solid var(--branco);
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    .formulario {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    form {
+        grid-template-areas: "nome"
+                             "estadocod"
+                             "regiao";
+    }
+
+    form input {
+        width: 90%;
+        height: 5vh;
+    }
+
+    .estadocod {
+        grid-template-areas: "estado estado estado"
+                             "codigo codigo codigo"  ;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .estado{
+        grid-area: estado;
+        width: 100%;
+    }
+
+    .estado input {
+        width: 100%;
+        height: 5vh;
+    }
+
+    .codigo {
+        grid-area: codigo ;
+        width: 100%; 
+    }
+
+    .botoes {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 60px;
+        gap: 10px;
+    }
+
+    .botoes button {
+        padding: 7px;
+        width: 70%;
+        border-radius: 150px;
+    }
+    
+}

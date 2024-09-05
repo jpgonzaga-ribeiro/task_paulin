@@ -1,0 +1,122 @@
+:root {
+    --cinza-menu: #D9D9D9;
+    --cinza-fundo: #E7E7E7;
+    --azul: #04C9F4;
+    --vermelho: #F40404;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+    color: rgb(0, 229, 255);
+    height: 10vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: var(--cinza-fundo);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px;
+    width: 100vw; 
+    height: calc(100vh - 70.15px);
+    border-radius: 2px;
+}
+
+.formulario {
+    background-color: var(--cinza-menu);
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    padding: 20px;
+    box-shadow: 0 3px 3px rgba(63, 63, 63, 0.737);
+}
+
+form {
+    background-color: var(--cinza-menu);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form input {
+    width: 30vw;
+    height: 7vh;
+    background-color: var(--branco);
+    border: none;
+    padding: 8px;
+}
+
+.logo {
+    height: 120px;
+    width: 140px;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+form > button {
+    background-color: var(--azul);
+    color: var(--branco);
+    width: 10vw;
+    height: 7vh;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header {
+        font-size: 1rem;
+        padding: 5vh;
+    }
+
+    header h2{
+        font-size: 1.1em;
+    }
+
+    main {
+        display: flex;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario {
+        width: 90vw;
+        padding: 15px;
+    }
+
+    form input {
+        width: 80vw;
+        height: 6vh;
+    }
+
+    form > button {
+        width: 50vw;
+        height: 6vh;
+    }
+
+    .logo {
+        height: 80px;
+        width: 100px;
+    }
+}
