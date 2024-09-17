@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+        <section class="formulario">
+            <h2>Formulário de Contato</h2>
+
+            <form id="FormularioContato" action="#">
+                
+                <label for="nome">Nome:</label>
+                <input type="text" placeholder="INSIRA SEU NOME" id="nome">
+                <p id="nomenp" class="erro">Nome inválido</p>
+
+                <label for="email">Email:</label>
+                <input type="email" placeholder="INSIRA SEU E-MAIL" id="email">
+                <p id="emailnp" class="erro">Email inválido</p>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="15" cols="77"></textarea>
+                <p id="mensagemnp" class="erro">Mensagem inválida</p>
+
+                <button type="submit" onclick="verificatudi()" >ENVIAR</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

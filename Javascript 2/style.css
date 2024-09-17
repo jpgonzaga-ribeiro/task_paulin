@@ -1,0 +1,125 @@
+:root {
+    --cinza-menu: #D9D9D9;
+    --cinza-fundo: #E7E7E7;
+    --azul: #04C9F4;
+    --vermelho: #F40404;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--cinza-fundo);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px;
+    width: 100vw; 
+    height: 100vh;
+    border-radius: 2px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding: 40px 10px ;
+    box-shadow: 0 0.9px 0.9px var(--cinza-menu);
+    border-radius: 5px;
+    background-color: var(--branco);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    align-items: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form p{
+    visibility: hidden;
+}
+
+form input {
+    width: 38vw;
+    height: 7vh;
+    background-color: var(--branco);
+    border: solid 1px black;
+    padding: 8px;
+}
+
+form textarea{
+    border: solid 1px black;
+    max-width: 38vw;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form > button {
+    background-color: rgb(31, 184, 31);
+    color: var(--branco);
+    width: 8vw;
+    height: 6vh;
+    border-radius: 5px;
+    border: none;
+    align-self: flex-start;
+}
+
+.erro {
+    color: red;
+    font-size: 14px;
+    visibility: hidden; 
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header {
+        font-size: 1rem;
+        padding: 5vh;
+    }
+
+    header h2{
+        font-size: 1.1em;
+    }
+
+    main {
+        display: flex;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario {
+        width: 90vw;
+        padding: 15px;
+    }
+
+    form input {
+        width: 80vw;
+        height: 6vh;
+    }
+
+    form > button {
+        width: 50vw;
+        height: 6vh;
+    }
+
+}
