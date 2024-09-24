@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Contato</title>
+    <link rel="stylesheet" href="../css/stylecidade.css">
+</head>
+<body>
+    <header>Cadastro de Contato</header>
+    
+    <main>
+
+        <section class="formulario">
+
+            <form id="formContato" onsubmit="return false;">
+                
+                <div class="nome">
+                    <h3>Nome</h3>
+                    <label for="nome"><input type="text" id="nome" disabled></label>
+                </div>
+
+                <div class="sobrenome">
+                    <h3>Sobrenome</h3>
+                    <label for="sobrenome"><input type="text" id="sobrenome" disabled></label>
+                </div>
+
+                <div class="regiao">
+                    <h3>Endereço</h3>
+                    <label for="endereco"><input type="text" id="endereco" disabled></label>
+                </div>
+                
+                <div class="tel">
+                    <h3>Telefone</h3>
+                    <label for="telefone"><input type="text" id="telefone" disabled></label>
+                </div>
+                
+            </form>
+            
+        </section>
+
+        <section class="botoes">
+            <button id="btnIncluir" onclick="adicionarContato()" style="background-color: green;">INCLUIR</button>
+            <button id="btnEditar" onclick="editarContato()" style="background-color: yellow;" disabled>EDITAR</button>
+            <button id="btnSalvar" onclick="salvarContato()" style="background-color: rgb(0, 221, 255);" disabled>SALVAR</button>
+            <button id="btnCancelar" onclick="cancelarEdicao()" style="background-color: rgb(255, 255, 255); color: aqua;" disabled>CANCELAR</button>
+            <button id="btnExcluir" onclick="excluirContato()" style="background-color: red;" disabled>EXCLUIR</button>
+        </section>
+
+        <section class="botaodireita">
+            <button id="btnPrimeiro" onclick="primeiroRegistro()" disabled>|&lt;</button>
+            <button id="btnAnterior" onclick="registroAnterior()" disabled>&lt;</button>
+            <button id="btnProximo" onclick="proximoRegistro()" disabled>&gt;</button>
+            <button id="btnUltimo" onclick="ultimoRegistro()" disabled>&gt;|</button>
+        </section>
+    </main>
+
+    <footer>
+        Agenda de Contatos
+    </footer>
+    <script src="../scriptcontato.js"></script>
+</body>
+</html>
