@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cinza-menu: #D9D9D9;
+    --cinza-fundo: #E7E7E7;
+    --azul: #04C9F4;
+    --vermelho: #F40404;
+    --branco: #FFFFFF;
+}
+
+
+.cadastro {
+    background-color: var(--azul);
+}
+
+header {
+    height: 7vh;
+    width: 100vw;
+    background-color: var(--azul);
+    display: flex;
+    padding-left: 40px;
+    align-items: center;
+    justify-content: left;
+    color: var(--branco);
+    font-size: 1.2rem;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 15px;
+    padding: 16px; 
+    width: 100vw; 
+    height: 85vh;
+    border-radius: 2px;
+    background-color: var(--cinza-fundo);
+}
+
+.formulario {
+    background-color: var(--cinza-menu);
+    display: flex;
+    flex-direction: row;
+    width: 38vw;
+    height: 40vh;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+form {
+    background-color: var(--cinza-menu);
+    display: grid;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    grid-template-areas: 
+        "nome sobrenome"
+        "regiao regiao"
+        "tel tel";
+    gap: 10px;
+}
+
+form h3 {
+    color: var(--branco);
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+form input {
+    height: 7vh;
+    background-color: var(--branco);
+    border: none;
+    padding: 5px;
+}
+
+.nome {
+    grid-area: nome;
+}
+
+.sobrenome {
+    grid-area: sobrenome;
+}
+
+.nome input,
+.sobrenome input {
+    width: 100%;
+}
+
+.regiao {
+    grid-area: regiao;
+}
+
+.regiao input {
+    width: 100%;
+}
+
+.tel {
+    grid-area: tel;
+}
+
+.tel input {
+    width: 50%;
+}
+
+#btnIncluir { background-color: green; color: white; border: 1px solid white; }
+#btnEditar { background-color: rgb(246, 246, 4); color: black; border: 1px solid white; }
+#btnSalvar { background-color: #04C9F4; color: white; border: 1px solid white;}
+#btnCancelar { background-color: #FFFFFF; color: #04C9F4; border: 1px solid #04C9F4; }
+#btnExcluir { background-color: #F40404; color: white; border: 1px solid white; }
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+#btnIncluir:disabled { background-color: green; color: white; }
+#btnEditar:disabled { background-color: rgb(246, 246, 4); color: black; }
+#btnSalvar:disabled { background-color: #04C9F4; color: white; }
+#btnCancelar:disabled { background-color: #FFFFFF; color: #04C9F4; border: 1px solid #04C9F4; }
+#btnExcluir:disabled { background-color: #F40404; color: white; }
+.botaodireita button:disabled {
+    background-color: #e0e0e0;
+    color: black;
+}
+.botaodireita button:disabled {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+.botoes {
+    margin-top: 40px;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: var(--branco);
+    gap: 10px;
+}
+
+.botoes button {
+    height: 6vh;
+    width: 10vw;
+    border: none;
+    color: var(--branco);
+}
+
+.botaodireita{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    color: var(--branco);
+    height: 6vh;
+    margin-left: -49vw;
+    margin-bottom: 27vh;
+    gap: 20px;
+}
+
+.botaodireita button{
+    width: 7vw;
+    border: none;
+    background-color: black;
+    color: var(--branco);
+}
+
+footer {
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--azul);
+    font-size: 1.3rem;
+}
+
